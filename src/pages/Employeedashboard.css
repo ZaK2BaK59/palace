@@ -1,0 +1,411 @@
+.employee-dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #0a1a1a 100%);
+  padding-bottom: 40px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.user-name {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.user-role {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.commission-banner {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(138, 43, 226, 0.15));
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  margin: 30px 40px;
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+}
+
+.commission-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.commission-label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.commission-value {
+  font-size: 48px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #d4af37 0%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.commission-rate {
+  background: rgba(138, 43, 226, 0.3);
+  border: 1px solid rgba(138, 43, 226, 0.5);
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 700;
+  color: #9d4edd;
+  font-size: 18px;
+}
+
+.pos-container {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 30px;
+  padding: 0 40px;
+  margin-bottom: 40px;
+}
+
+.products-section,
+.cart-section {
+  background: rgba(15, 15, 15, 0.8);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.products-section h2,
+.cart-section h2 {
+  color: #d4af37;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.product-card {
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  background: rgba(212, 175, 55, 0.2);
+  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+.product-name {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.product-price {
+  color: #d4af37;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.cart-section {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 100px;
+  max-height: calc(100vh - 140px);
+}
+
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  max-height: 400px;
+}
+
+.empty-cart {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 40px 20px;
+  font-style: italic;
+}
+
+.cart-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 12px;
+}
+
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.item-name {
+  font-weight: 600;
+}
+
+.item-price {
+  color: #d4af37;
+  font-weight: 700;
+}
+
+.item-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.item-controls button {
+  width: 32px;
+  height: 32px;
+  background: rgba(212, 175, 55, 0.2);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: #d4af37;
+  border-radius: 6px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.item-controls button:hover {
+  background: rgba(212, 175, 55, 0.3);
+  transform: scale(1.1);
+}
+
+.remove-btn {
+  background: rgba(220, 38, 38, 0.2) !important;
+  border-color: rgba(220, 38, 38, 0.4) !important;
+  color: #fca5a5 !important;
+  font-size: 20px;
+}
+
+.quantity {
+  min-width: 30px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.cart-summary {
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.summary-row:last-child {
+  margin-bottom: 0;
+}
+
+.commission-row {
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #9d4edd;
+}
+
+.total-amount {
+  font-size: 24px;
+  font-weight: 900;
+  color: #d4af37;
+}
+
+.commission-amount {
+  font-size: 20px;
+  font-weight: 900;
+  color: #9d4edd;
+}
+
+.validate-btn {
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(135deg, #d4af37 0%, #ffd700 100%);
+  color: #000;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+.validate-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
+}
+
+.validate-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.tickets-history {
+  padding: 0 40px;
+}
+
+.tickets-history h2 {
+  color: #d4af37;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.tickets-list {
+  display: grid;
+  gap: 15px;
+}
+
+.ticket-item {
+  background: rgba(15, 15, 15, 0.8);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.ticket-item:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+.ticket-summary {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.ticket-summary:hover {
+  background: rgba(212, 175, 55, 0.05);
+}
+
+.ticket-info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex: 1;
+}
+
+.ticket-date {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+}
+
+.ticket-total {
+  font-size: 20px;
+  font-weight: 900;
+  color: #d4af37;
+}
+
+.ticket-commission {
+  color: #9d4edd;
+  font-weight: 700;
+}
+
+.delete-ticket-btn {
+  padding: 8px 16px;
+  background: rgba(220, 38, 38, 0.2);
+  border: 1px solid rgba(220, 38, 38, 0.5);
+  color: #fca5a5;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.delete-ticket-btn:hover {
+  background: rgba(220, 38, 38, 0.3);
+  transform: translateY(-2px);
+}
+
+.ticket-details {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ticket-detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ticket-detail-item:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 1200px) {
+  .pos-container {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-section {
+    position: relative;
+    top: 0;
+    max-height: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .commission-banner {
+    margin: 20px;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .commission-info {
+    align-items: center;
+  }
+
+  .commission-value {
+    font-size: 36px;
+  }
+
+  .pos-container {
+    padding: 0 20px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .tickets-history {
+    padding: 0 20px;
+  }
+
+  .ticket-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
